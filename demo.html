@@ -33,7 +33,9 @@
             </div>
         </div>
         <div class="box-banner">
-
+            <div class="btn-wrapper">
+                <img src="./images/gobroadcast.png" class="gobroadcast" />
+            </div>
         </div>
         <div class="box-time" id="box-time">
             <div class="time-list">
@@ -263,7 +265,10 @@
         $(this).addClass('active');
         $(this).siblings().removeClass('active');
         let m = $(".nav-item").index(this);
-        scrollTo(navMap[m], 500);
+        scrollTo(navMap[m], 1000);
+    })
+    $(".gobroadcast").on('click', function () {
+        scrollTo('#card-broadcast', 1000);
     })
 
     function scrollTo(ele, speed) {
