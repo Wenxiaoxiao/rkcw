@@ -230,6 +230,31 @@
             el: '.swiper-scrollbar',
         },
     });
+    //10.31号的时候，10.30就是回放
+    let timer = setInterval(function () {
+        dealTime();
+    }, 60000);
+
+    dealTime();
+
+    function dealTime() {
+        let time = new Date('2020/10/31').getTime();
+        let now = new Date().getTime();
+        if (now > time) {
+            clearInterval(timer);
+            $(".card-broadcast .tabs-tit-list .tit-item1").removeClass('active');
+            $(".card-broadcast .tabs-tit-list .tit-item2").addClass('active');
+            $(".card-broadcast .tabs-tit-list .tit-item").on("click", function () {
+                $(this).addClass('active');
+                $(this).siblings().removeClass('active');
+                let m = $(this).index();
+                console.log('m====', m);
+                //展示对应的content
+                $($(".card-broadcast .tabs-content-list .design-video")[m]).removeClass('display_none');
+                $($(".card-broadcast .tabs-content-list .design-video")[m]).siblings().addClass('display_none');
+            })
+        }
+    }
     //鼠标悬浮，右侧内容展示
     $(".time-lists-left .time-item span").mouseenter(function () {
         $(this).parent().addClass('active');
