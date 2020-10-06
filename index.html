@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>倒计时</title>
+    <script src="./jquery.min.js"></script>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="box-wrapper">
+        <div class="timer-box">
+            <span class="times days"></span><span class="unit">Days</span>
+            <span class="times hr"></span><span class="unit">Hr</span>
+            <span class="times min"></span><span class="unit">Min</span>
+            <span class="times sec"></span><span class="unit">Sec</span>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    $(function () {
+        function dealTime() {
+            let time = new Date('2020/10/31').getTime();
+            let now = new Date().getTime();
+            //倒计时 xx Days xx Hr xx Min xx Sec
+            if (now < time) {
+                let ts = (time - now) / 1000;
+                // console.log('cut===', ts);
+                let dd = parseInt(ts / 60 / 60 / 24); //计算剩余的天数
+                let hh = parseInt(ts / 60 / 60 % 24); //计算剩余的小时数
+                let mm = parseInt(ts / 60 % 60); //计算剩余的分钟数
+                let ss = parseInt(ts % 60); //计算剩余的秒数
+                dd = dd > 10 || dd == 10 ? dd : '0' + dd;
+                hh = hh > 10 || hh == 10 ? hh : '0' + hh;
+                mm = mm > 10 || mm == 10 ? mm : '0' + mm;
+                ss = ss > 10 || ss == 10 ? ss : '0' + ss;
+                $(".days").text(dd);
+                $(".hr").text(hh);
+                $(".min").text(mm);
+                $(".sec").text(ss);
+            } else {
+                clearInterval(timer);
+                $(".days").text('00');
+                $(".hr").text('00');
+                $(".min").text('00');
+                $(".sec").text('00');
+            }
+        };
+        let timer = setInterval(function () {
+            dealTime();
+        }, 1000)
+        dealTime();
+    })
+</script>
+
+</html>
