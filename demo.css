@@ -113,6 +113,7 @@ img {
   width: 100vw;
   height: 1351px;
   background: url('./images/banner.jpg') no-repeat top center;
+  background-size: cover;
   display: block;
 }
 .wrapper-box .box-banner .btn-wrapper {
@@ -132,6 +133,7 @@ img {
   height: 566px;
   background: url('./images/time/bg.jpg') no-repeat top center;
   padding-top: 80px;
+  background-size: cover;
 }
 .wrapper-box .box-time .time-list {
   width: 1200px;
@@ -310,6 +312,7 @@ img {
 .wrapper-box .box-content {
   width: 100vw;
   background: url('./images/bg.jpg') no-repeat top center;
+  background-size: cover;
   padding-bottom: 200px;
 }
 .wrapper-box .box-content .content-center {
