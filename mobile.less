@@ -244,7 +244,60 @@ img {
         background: url('./img/3.png') no-repeat center;
         background-size: @width @height;
         .marginT(-1);
+        .paddingT(80);
         margin-top: @marginT;
+        padding-top: @paddingT;
+
+        .kzzx-title {
+            .width(390);
+            .height(90);
+            width: @width;
+            height: @height;
+            background: url('./img/tit1.png') no-repeat center;
+            background-size: @width @height;
+            margin: 0 auto;
+        }
+
+        .kzzx-tabs-list {
+            .width(649);
+            .height(40);
+            width: @width;
+            height: @height;
+            margin: 0 auto;
+            display: flex;
+
+            .kzzx-tab-item {
+                .width(222);
+                .height(40);
+                width: @width;
+                height: @height;
+                background: url('./img/tab0.png') no-repeat center;
+                background-size: @width @height;
+                text-align: center;
+                color: #fff;
+                .font(21);
+                font-size: @font;
+                font-weight: bold;
+                line-height: @height;
+
+                &.active {
+                    background: url('./img/tab1.png') no-repeat center;
+                    background-size: @width @height;
+                    color: #000235;
+                }
+            }
+        }
+
+        .kzzx-content-list {
+            .kzzx-content-item {
+                .img-box {
+                    .width(649);
+                    .height(455);
+                    width: @width;
+                    height: @height;
+                }
+            }
+        }
     }
 
     .common-box-4 {
