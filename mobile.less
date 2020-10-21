@@ -295,6 +295,29 @@ img {
                     .height(455);
                     width: @width;
                     height: @height;
+                    position: relative;
+                    margin: 0 auto;
+
+                    .img-item {
+                        .width(608);
+                        .height(397);
+                        width: @width;
+                        height: @height;
+                        margin: 0 auto;
+                        position: relative;
+                        z-index: 1;
+                    }
+
+                    .img-text {
+                        .width(608);
+                        .height(421);
+                        width: @width;
+                        height: @height;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        background: #000;
+                    }
                 }
             }
         }
