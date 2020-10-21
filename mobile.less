@@ -1,0 +1,304 @@
+// 页面样式重置
+@baseFontSize: 75;
+
+.r(@px) {
+    @r: @px/@baseFontSize*1rem;
+}
+
+.width(@px) {
+    @width: @px/@baseFontSize*1rem;
+}
+
+.height(@px) {
+    @height: @px/@baseFontSize*1rem;
+}
+
+.margin(@px) {
+    @margin: @px/@baseFontSize*1rem;
+}
+
+.padding(@px) {
+    @padding: @px/@baseFontSize*1rem;
+}
+
+.paddingL(@px) {
+    @paddingL: @px/@baseFontSize*1rem;
+}
+
+.paddingR(@px) {
+    @paddingR: @px/@baseFontSize*1rem;
+}
+
+.paddingT(@px) {
+    @paddingT: @px/@baseFontSize*1rem;
+}
+
+.paddingB(@px) {
+    @paddingB: @px/@baseFontSize*1rem;
+}
+
+.marginL(@px) {
+    @marginL: @px/@baseFontSize*1rem;
+}
+
+.marginR(@px) {
+    @marginR: @px/@baseFontSize*1rem;
+}
+
+.marginT(@px) {
+    @marginT: @px/@baseFontSize*1rem;
+}
+
+.marginB(@px) {
+    @marginB: @px/@baseFontSize*1rem;
+}
+
+.borderRadius(@px) {
+    @borderRadius: @px/@baseFontSize*1rem;
+}
+
+.font(@px) {
+    @font: @px/@baseFontSize*1rem;
+}
+
+.textIndent(@px) {
+    @textIndent: @px/@baseFontSize*1rem;
+}
+
+.top(@px) {
+    @top: @px/@baseFontSize*1rem;
+}
+
+.left(@px) {
+    @left: @px/@baseFontSize*1rem;
+}
+
+.line(@px) {
+    @line: @px/@baseFontSize*1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+img {
+    border: none;
+}
+
+//页面样式
+.mobile-container {
+    .width(750);
+    width: @width;
+    min-height: 100vh;
+
+    .common-box {
+        .width(750);
+        width: @width;
+    }
+
+    .common-box-1 {
+        .width(750);
+        .height(1218);
+        width: @width;
+        height: @height;
+        background: url('./img/1.png') no-repeat center;
+        background-size: @width @height;
+        position: relative;
+
+        .logo {
+            .width(290);
+            .height(115);
+            width: @width;
+            height: @height;
+            position: absolute;
+            .top(176);
+            top: @top;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    .common-box-2 {
+        .width(750);
+        .height(686);
+        width: @width;
+        height: @height;
+        background: url('./img/2.png') no-repeat center;
+        background-size: @width @height;
+        .marginT(-1);
+        margin-top: @marginT;
+
+        .tabs-title-list {
+            .width(540);
+            .height(97);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            width: @width;
+            height: @height;
+            .paddingT(57);
+            padding-top: @paddingT;
+
+            .tit-item {
+                .width(233);
+                .height(40);
+                width: @width;
+                height: @height;
+                background: url('./img/time0.png') no-repeat;
+                background-size: @width @height;
+                .font(22);
+                font-size: @font;
+                font-weight: bold;
+                color: #867984;
+                text-align: center;
+                line-height: @height;
+
+                &.active {
+                    background: url('./img/time1.png') no-repeat;
+                    background-size: @width @height;
+                    color: #ffdebf;
+                }
+            }
+        }
+
+        .tabs-content-list {
+            .width(650);
+            width: @width;
+            margin: 0 auto;
+
+            .item-list-left {
+                color: #867984;
+                .width(320);
+                display: inline-block;
+                font-size: 0;
+                width: @width;
+                .paddingT(50);
+                padding-top: @paddingT;
+                .top(112);
+                .left(15);
+                .height(288);
+                .line(1);
+                background: url('./img/line0.png') no-repeat;
+                background-position: @left @top;
+                background-size: @line @height;
+
+                .item-it {
+                    .height(30);
+                    line-height: @height;
+                    .marginT(27);
+                    margin-top: @marginT;
+                    .paddingL(60);
+                    padding-left: @paddingL;
+                    background: url('./img/icon3.png') no-repeat left center;
+                    background-size: @height @height;
+
+                    .item-time {
+                        .font(16);
+                        font-size: @font;
+                        .marginR(34);
+                        margin-right: @marginR;
+                    }
+
+                    .item-title {
+                        .font(21);
+                        font-size: @font;
+                        font-weight: bold;
+                    }
+                }
+
+                &.active {
+                    color: #ffdebf;
+                    .top(112);
+                    .left(15);
+                    .height(288);
+                    .line(1);
+                    background: url('./img/line1.png') no-repeat;
+                    background-position: @left @top;
+                    background-size: @line @height;
+
+                    .item-it {
+                        .height(30);
+                        background: url('./img/icon3.png') no-repeat left center;
+                        background-size: @height @height;
+                    }
+                }
+            }
+        }
+    }
+
+    .common-box-3 {
+        .width(750);
+        .height(234);
+        width: @width;
+        height: @height;
+        background: url('./img/3.png') no-repeat center;
+        background-size: @width @height;
+        .marginT(-1);
+        margin-top: @marginT;
+    }
+
+    .common-box-4 {
+        .width(750);
+        .height(802);
+        width: @width;
+        height: @height;
+        background: url('./img/4.png') no-repeat center;
+        background-size: @width @height;
+        .marginT(-2);
+        margin-top: @marginT;
+    }
+
+    .common-box-5 {
+        .width(750);
+        .height(625);
+        width: @width;
+        height: @height;
+        background: url('./img/5.png') no-repeat center;
+        background-size: @width @height;
+        .marginT(-1);
+        margin-top: @marginT;
+    }
+
+    .common-box-6 {
+        .width(750);
+        .height(726);
+        width: @width;
+        height: @height;
+        background: url('./img/6.png') no-repeat center;
+        background-size: @width @height;
+        .marginT(-2);
+        margin-top: @marginT;
+    }
+
+    .common-box-7 {
+        .width(750);
+        .height(760);
+        width: @width;
+        height: @height;
+        background: url('./img/7.png') no-repeat center;
+        background-size: @width @height;
+        .marginT(-1);
+        margin-top: @marginT;
+    }
+
+    .common-box-8 {
+        .width(750);
+        .height(770);
+        width: @width;
+        height: @height;
+        background: url('./img/8.png') no-repeat center;
+        background-size: @width @height;
+        .marginT(-1);
+        margin-top: @marginT;
+    }
+}
