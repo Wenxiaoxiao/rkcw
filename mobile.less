@@ -44,6 +44,7 @@ img {
 .mobile-container {
     width: 750px;
     min-height: 100vh;
+    margin: 0 auto;
 
     .common-box {
         width: 750px;
@@ -435,7 +436,62 @@ img {
             background: url('./img/tit4.png') no-repeat center;
             background-size: 750px 176px;
             margin: 0 auto;
-            margin-bottom: 50px;
+        }
+
+        .cwjlb-tabs-list {
+            width: 649px;
+            height: 40px;
+            margin: 0 auto;
+            display: flex;
+            margin-top: 30px;
+            margin-bottom: 68px;
+
+            .cwjlb-tab-item {
+                width: 222px;
+                height: 40px;
+                background: url('./img/tab0.png') no-repeat center;
+                background-size: 222px 40px;
+                text-align: center;
+                color: #fff;
+                font-size: 21px;
+                font-weight: bold;
+                line-height: 40px;
+
+                &.active {
+                    background: url('./img/tab1.png') no-repeat center;
+                    background-size: 222px 40px;
+                    color: #000235;
+                }
+            }
+        }
+
+        .cwjlb-content-list {
+            width: 390px;
+            height: 424px;
+            overflow: hidden;
+            margin: 0 auto;
+
+            .cwjlb-content-item {
+                width: 390px;
+                height: 424px;
+                overflow: hidden;
+
+                img {
+                    width: 390px;
+                    height: 424px;
+                }
+            }
+        }
+
+        .cwjlb-bottom {
+            width: 750px;
+            height: 35px;
+            margin: 0 auto;
+
+            img {
+                width: 750px;
+                height: 35px;
+            }
         }
     }
 
