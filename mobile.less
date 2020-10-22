@@ -353,6 +353,7 @@ img {
                 font-size: 21px;
                 font-weight: bold;
                 line-height: 40px;
+                cursor: pointer;
 
                 &.active {
                     background: url('./img/tab1.png') no-repeat center;
@@ -416,7 +417,8 @@ img {
                 height: 381px;
                 overflow: hidden;
 
-                img {
+                img,
+                video {
                     width: 100%;
                 }
             }
@@ -498,6 +500,7 @@ img {
                 font-size: 21px;
                 font-weight: bold;
                 line-height: 40px;
+                cursor: pointer;
 
                 &.active {
                     background: url('./img/tab1.png') no-repeat center;
@@ -517,6 +520,11 @@ img {
                 width: 390px;
                 height: 424px;
                 overflow: hidden;
+                display: none;
+
+                &.active {
+                    display: block;
+                }
 
                 img {
                     width: 390px;

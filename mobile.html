@@ -174,8 +174,8 @@
         <div class="common-box common-box-5">
             <div class="kzzb-title"></div>
             <div class="kzzb-tabs-list">
-                <div class="kzzb-tab-item active">卡展新闻</div>
-                <div class="kzzb-tab-item">卡展活动</div>
+                <div class="kzzb-tab-item active">10.30</div>
+                <div class="kzzb-tab-item">10.31</div>
             </div>
             <div class="kzzb-content-list">
                 <div class="kzzb-content-item">
@@ -193,16 +193,20 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="./img/slide1.png" />
+                        <video class="design-video" src="https://www.w3school.com.cn/i/movie.ogg"
+                            controls="controls"></video>
                     </div>
                     <div class="swiper-slide">
-                        <img src="./img/slide1.png" />
+                        <video class="design-video" src="https://www.w3school.com.cn/i/movie.ogg"
+                            controls="controls"></video>
                     </div>
                     <div class="swiper-slide">
-                        <img src="./img/slide1.png" />
+                        <video class="design-video" src="https://www.w3school.com.cn/i/movie.ogg"
+                            controls="controls"></video>
                     </div>
                     <div class="swiper-slide">
-                        <img src="./img/slide1.png" />
+                        <video class="design-video" src="https://www.w3school.com.cn/i/movie.ogg"
+                            controls="controls"></video>
                     </div>
                 </div>
                 <!-- 如果需要分页器 -->
@@ -227,8 +231,12 @@
                 <div class="cwjlb-content-item active">
                     <img src="./img/4.1.png" />
                 </div>
-                <div class="cwjlb-content-item"></div>
-                <div class="cwjlb-content-item"></div>
+                <div class="cwjlb-content-item">
+                    <img src="./img/4.1.png" />
+                </div>
+                <div class="cwjlb-content-item">
+                    <img src="./img/4.1.png" />
+                </div>
             </div>
             <div class="cwjlb-bottom">
                 <img src="./img/bottom.png" />
@@ -288,6 +296,14 @@
         let m = $(".kzzx-tabs-list .kzzx-tab-item").index(this);
         $($('.kzzx-content-list .kzzx-content-item')[m]).addClass('active');
         $($('.kzzx-content-list .kzzx-content-item')[m]).siblings().removeClass('active');
+    })
+    //潮玩俱乐部
+    $('.cwjlb-tabs-list').on('click', '.cwjlb-tab-item', function () {
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active');
+        let m = $(".cwjlb-tabs-list .cwjlb-tab-item").index(this);
+        $($('.cwjlb-content-list .cwjlb-content-item')[m]).addClass('active');
+        $($('.cwjlb-content-list .cwjlb-content-item')[m]).siblings().removeClass('active');
     })
 </script>
 
