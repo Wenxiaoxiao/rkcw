@@ -56,6 +56,7 @@ img {
         background: url('./img/1.png') no-repeat center;
         background-size: 750px 1218px;
         position: relative;
+        padding-top: 820px;
 
         .logo {
             width: 290px;
@@ -64,6 +65,75 @@ img {
             top: 176px;
             left: 50%;
             transform: translateX(-50%);
+        }
+
+        .index-animation {
+            width: 750px;
+            height: 364px;
+            padding: 0 48px;
+
+            .index-ani-tab-list {
+                width: 654px;
+                height: 260px;
+                display: flex;
+                justify-content: space-between;
+
+                .index-tab-item {
+                    width: 260px;
+                    height: 260px;
+                    background: url('./img/unactive.png') no-repeat center center;
+                    background-size: 224px 224px;
+                    color: rgba(255, 255, 255, 0.8);
+                    font-size: 19px;
+                    text-align: center;
+                    line-height: 260px;
+
+                    &.active {
+                        background: url('./img/active.png') no-repeat center center;
+                        background-size: 224px 224px;
+                        font-size: 22px;
+                        color: #fff;
+                    }
+                }
+
+                .index-tab-item:nth-child(2) {
+                    background-size: 260px 260px;
+                }
+            }
+
+            .index-ani-content-list {
+                height: 104px;
+                overflow: hidden;
+
+                .index-content-item {
+                    height: 104px;
+                    color: #fff;
+                    padding-top: 50px;
+                    text-align: center;
+                    font-size: 21px;
+                    text-shadow: 0 0 10px #29baeb;
+                    display: none;
+
+                    &.active {
+                        display: block;
+                    }
+                }
+
+                .index-content-item:nth-child(1) {
+                    background: url('./img/arrow.png') no-repeat 100px 0px;
+                    background-size: 27px 41px;
+                }
+
+                .index-content-item:nth-child(2) {
+                    background: url('./img/arrow.png') no-repeat center 0px;
+                    background-size: 27px 41px;
+                }
+
+                .index-content-item:nth-child(3) {
+                    background: url('./img/arrow.png') no-repeat 550px 0px;
+                    background-size: 27px 41px;
+                }
+            }
         }
     }
 
@@ -109,11 +179,12 @@ img {
             .item-list-left {
                 color: #867984;
                 display: inline-block;
+                vertical-align: top;
                 font-size: 0;
                 width: 320px;
-                padding-top: 50px;
+                padding-top: 20px;
                 background: url('./img/line0.png') no-repeat;
-                background-position: 15px 112px;
+                background-position: 15px 82px;
                 background-size: 1px 288px;
 
                 .item-it {
@@ -153,7 +224,7 @@ img {
                 &.active {
                     color: #ffdebf;
                     background: url('./img/line1.png') no-repeat;
-                    background-position: 15px 112px;
+                    background-position: 15px 82px;
                     background-size: 1px 288px;
 
                     .item-it {
@@ -336,12 +407,23 @@ img {
             margin: 0 auto;
         }
 
+        .kzzb-status {
+            width: 444px;
+            height: 30px;
+            line-height: 30px;
+            margin: 0 auto;
+            color: #e4b393;
+            font-size: 16px;
+            text-indent: 160px;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+
         .kzzb-tabs-list {
             width: 444px;
             height: 40px;
             display: flex;
             margin: 0 auto;
-            margin-top: 30px;
 
             .kzzb-tab-item {
                 width: 222px;

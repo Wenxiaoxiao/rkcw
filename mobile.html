@@ -20,6 +20,24 @@
     <div class="mobile-container">
         <div class="common-box common-box-1">
             <img src="./img/logo.png" class="logo" />
+            <div class="index-animation">
+                <div class="index-ani-tab-list">
+                    <div class="index-tab-item">展示</div>
+                    <div class="index-tab-item active">交流</div>
+                    <div class="index-tab-item">探宝</div>
+                </div>
+                <div class="index-ani-content-list">
+                    <div class="index-content-item">
+                        各大品牌新品发布，为你展示不同品牌文化与店家风采。
+                    </div>
+                    <div class="index-content-item active">
+                        各大品牌新品发布，为你展示不同品牌文化与店家风采2。
+                    </div>
+                    <div class="index-content-item">
+                        各大品牌新品发布，为你展示不同品牌文化与店家风采3。
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="common-box common-box-2">
             <div class="tabs-title-list">
@@ -84,6 +102,11 @@
                         <span class="item-time">17:00</span>
                         <span class="item-title">寻宝奇兵</span>
                         <span class="item-content">展示在下方我是内容内容，展示在下方11</span>
+                    </div>
+                    <div class="item-it">
+                        <span class="item-time">17:00</span>
+                        <span class="item-title">寻宝奇兵</span>
+                        <span class="item-content">展示在下方我是内容内容，展示在下方12</span>
                     </div>
                     <div class="item-it">
                         <span class="item-time">17:00</span>
@@ -173,6 +196,7 @@
         <div class="common-box common-box-4"></div>
         <div class="common-box common-box-5">
             <div class="kzzb-title"></div>
+            <div class="kzzb-status">直播中</div>
             <div class="kzzb-tabs-list">
                 <div class="kzzb-tab-item active">10.30</div>
                 <div class="kzzb-tab-item">10.31</div>
@@ -211,13 +235,6 @@
                 </div>
                 <!-- 如果需要分页器 -->
                 <div class="swiper-pagination"></div>
-
-                <!-- 如果需要导航按钮 -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
-                <!-- 如果需要滚动条 -->
-                <div class="swiper-scrollbar"></div>
             </div>
         </div>
         <div class="common-box common-box-7">
@@ -304,6 +321,13 @@
         let m = $(".cwjlb-tabs-list .cwjlb-tab-item").index(this);
         $($('.cwjlb-content-list .cwjlb-content-item')[m]).addClass('active');
         $($('.cwjlb-content-list .cwjlb-content-item')[m]).siblings().removeClass('active');
+    })
+    $('.index-ani-tab-list').on('click', '.index-tab-item', function () {
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active');
+        let m = $(".index-ani-tab-list .index-tab-item").index(this);
+        $($('.index-ani-content-list .index-content-item')[m]).addClass('active');
+        $($('.index-ani-content-list .index-content-item')[m]).siblings().removeClass('active');
     })
 </script>
 
