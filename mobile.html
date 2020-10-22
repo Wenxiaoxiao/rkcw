@@ -31,55 +31,68 @@
                     <div class="item-it">
                         <span class="item-time">17:00</span>
                         <span class="item-title">品牌探秘</span>
+                        <span class="item-content">展示在下方我是内容内容，展示在下方1</span>
                     </div>
                     <div class="item-it">
                         <span class="item-time">17:00</span>
                         <span class="item-title">行业论坛</span>
+                        <span class="item-content">展示在下方我是内容内容，展示在下方2</span>
                     </div>
                     <div class="item-it">
                         <span class="item-time">17:00</span>
                         <span class="item-title">寻宝奇兵</span>
+                        <span class="item-content">展示在下方我是内容内容，展示在下方3</span>
                     </div>
                     <div class="item-it">
                         <span class="item-time">17:00</span>
                         <span class="item-title">寻宝奇兵</span>
+                        <span class="item-content">展示在下方我是内容内容，展示在下方4</span>
                     </div>
                     <div class="item-it">
                         <span class="item-time">17:00</span>
                         <span class="item-title">寻宝奇兵</span>
+                        <span class="item-content">展示在下方我是内容内容，展示在下方5</span>
                     </div>
                     <div class="item-it">
                         <span class="item-time">17:00</span>
                         <span class="item-title">寻宝奇兵</span>
+                        <span class="item-content">展示在下方我是内容内容，展示在下方6</span>
                     </div>
                 </div>
                 <div class="item-list-left">
                     <div class="item-it">
                         <span class="item-time">17:00</span>
                         <span class="item-title">品牌探秘</span>
+                        <span class="item-content">展示在下方我是内容内容，展示在下方7</span>
                     </div>
                     <div class="item-it">
                         <span class="item-time">17:00</span>
                         <span class="item-title">行业论坛</span>
+                        <span class="item-content">展示在下方我是内容内容，展示在下方8</span>
                     </div>
                     <div class="item-it">
                         <span class="item-time">17:00</span>
                         <span class="item-title">寻宝奇兵</span>
+                        <span class="item-content">展示在下方我是内容内容，展示在下方9</span>
                     </div>
                     <div class="item-it">
                         <span class="item-time">17:00</span>
                         <span class="item-title">寻宝奇兵</span>
+                        <span class="item-content">展示在下方我是内容内容，展示在下方10</span>
                     </div>
                     <div class="item-it">
                         <span class="item-time">17:00</span>
                         <span class="item-title">寻宝奇兵</span>
+                        <span class="item-content">展示在下方我是内容内容，展示在下方11</span>
                     </div>
                     <div class="item-it">
                         <span class="item-time">17:00</span>
                         <span class="item-title">寻宝奇兵</span>
+                        <span class="item-content">展示在下方我是内容内容，展示在下方12</span>
                     </div>
                 </div>
             </div>
+            <div class="show-detail-content"></div>
         </div>
         <div class="common-box common-box-3">
             <div class="kzzx-title"></div>
@@ -199,8 +212,32 @@
         centeredSlides: true, //设定为true时，active slide会居中，而不是默认状态下的居左。
     });
     //时间轴点击切换
-    $("tabs-title-list").on('click', '.tit-item', function () {
-
+    $(".tabs-title-list").on('click', '.tit-item', function () {
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active');
+        let m = $(".tabs-title-list .tit-item").index(this);
+        $($('.tabs-content-list .item-list-left')[m]).addClass('active');
+        $($('.tabs-content-list .item-list-left')[m]).siblings().removeClass('active');
+    })
+    //点击下方的时间列表也会改变
+    $('.tabs-content-list').on('click', '.item-list-left', function () {
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active');
+        let m = $(".tabs-content-list .item-list-left").index(this);
+        $($('.tabs-title-list .tit-item')[m]).addClass('active');
+        $($('.tabs-title-list .tit-item')[m]).siblings().removeClass('active');
+        if (m == 0) {
+            $($('.item-list-left')[1]).find('.item-it').removeClass('active');
+        } else if (m == 1) {
+            $($('.item-list-left')[0]).find('.item-it').removeClass('active');
+        }
+    })
+    //点击时间 下方出现说明框
+    $('.item-list-left').on('click', '.item-it', function () {
+        //获取说明内容，放到下方 .show-detail-content
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active');
+        $('.show-detail-content').html($(this).find('.item-content').html());
     })
 </script>
 
