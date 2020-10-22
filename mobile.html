@@ -134,19 +134,20 @@
             </div>
         </div>
         <div class="common-box common-box-6">
+            <div class="hdjj-title"></div>
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="./images/hightlight/1.jpg" />
+                        <img src="./img/slide1.png" />
                     </div>
                     <div class="swiper-slide">
-                        <img src="./images/hightlight/2.jpg" />
+                        <img src="./img/slide1.png" />
                     </div>
                     <div class="swiper-slide">
-                        <img src="./images/hightlight/3.jpg" />
+                        <img src="./img/slide1.png" />
                     </div>
                     <div class="swiper-slide">
-                        <img src="./images/hightlight/4.jpg" />
+                        <img src="./img/slide1.png" />
                     </div>
                 </div>
                 <!-- 如果需要分页器 -->
@@ -160,7 +161,9 @@
                 <div class="swiper-scrollbar"></div>
             </div>
         </div>
-        <div class="common-box common-box-7"></div>
+        <div class="common-box common-box-7">
+            <div class="cwjlb-title"></div>
+        </div>
         <div class="common-box common-box-8"></div>
     </div>
 </body>
@@ -171,7 +174,7 @@
         loop: true, // 循环模式选项
         //spaceBetween: 30,
         //loopedSlides: 4, //在loop模式下使用slidesPerview:'auto',还需使用该参数设置所要用到的loop个数。
-        slidesPerView: 2, //设置slider容器能够同时显示的slides数量(carousel模式)。另外，支持'auto'值，会根据容器container的宽度调整slides数目。
+        slidesPerView: 1.5, //设置slider容器能够同时显示的slides数量(carousel模式)。另外，支持'auto'值，会根据容器container的宽度调整slides数目。
         //effect: 'coverflow', //可以实现3D效果的轮播,
         // 如果需要分页器
         pagination: {
@@ -179,16 +182,6 @@
             clickable: true
         },
         centeredSlides: true, //设定为true时，active slide会居中，而不是默认状态下的居左。
-        // 如果需要前进后退按钮
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
-        // 如果需要滚动条
-        scrollbar: {
-            el: '.swiper-scrollbar',
-        },
     });
 </script>
 
