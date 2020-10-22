@@ -210,6 +210,7 @@ img {
                 font-size: 21px;
                 font-weight: bold;
                 line-height: 40px;
+                cursor: pointer;
 
                 &.active {
                     background: url('./img/tab1.png') no-repeat center;
@@ -221,8 +222,20 @@ img {
 
         .kzzx-content-list {
             margin-top: 44px;
+            width: 750px;
+            height: 720px;
+            overflow: hidden;
 
             .kzzx-content-item {
+                width: 750px;
+                height: 720px;
+                overflow: hidden;
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+
                 .img-box {
                     width: 649px;
                     height: 455px;

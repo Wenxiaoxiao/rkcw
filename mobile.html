@@ -28,7 +28,7 @@
             </div>
             <div class="tabs-content-list">
                 <div class="item-list-left active">
-                    <div class="item-it">
+                    <div class="item-it active">
                         <span class="item-time">17:00</span>
                         <span class="item-title">品牌探秘</span>
                         <span class="item-content">展示在下方我是内容内容，展示在下方1</span>
@@ -92,7 +92,7 @@
                     </div>
                 </div>
             </div>
-            <div class="show-detail-content"></div>
+            <div class="show-detail-content">展示在下方我是内容内容，展示在下方1</div>
         </div>
         <div class="common-box common-box-3">
             <div class="kzzx-title"></div>
@@ -102,7 +102,7 @@
                 <div class="kzzx-tab-item">卡展限定</div>
             </div>
             <div class="kzzx-content-list">
-                <div class="kzzx-content-item">
+                <div class="kzzx-content-item active">
                     <div class="img-box">
                         <img src="./img/p_1.png" class="img-item" />
                         <div class="img-text">
@@ -124,8 +124,50 @@
                         </div>
                     </div>
                 </div>
-                <div class="kzzx-content-item"></div>
-                <div class="kzzx-content-item"></div>
+                <div class="kzzx-content-item">
+                    <div class="img-box">
+                        <img src="./img/p_1.png" class="img-item" />
+                        <div class="img-text">
+                            <div class="txt-item">是描述描述我是描述描述我是描述描述我是描述描述我是描述描述1</div>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <div class="text-left">
+                            <div class="text-title">标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题1</div>
+                            <div class="text-desc">
+                                1我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容
+                                我是内容我是我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容</div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-title">1我是我是标题我是标题我是标题我是标题我是标题我是标题我是标题</div>
+                            <div class="text-desc">
+                                1我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容
+                                我是内容我是内容我是内是内容我是内容我是内容我是内容我是内容我是内容我是内容</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kzzx-content-item">
+                    <div class="img-box">
+                        <img src="./img/p_1.png" class="img-item" />
+                        <div class="img-text">
+                            <div class="txt-item">2我是描述描述我是描述我是描述描述我是描述描述我是描述描述</div>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <div class="text-left">
+                            <div class="text-title">2我是标题我是我是标题我是标题我是标题我是标题我是标题我是标题</div>
+                            <div class="text-desc">
+                                2我是内容我是内容我是内容我是内容我容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容
+                                我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容</div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-title">2我是标题我题我是标题我是标题我是标题我是标题我是标题我是标题</div>
+                            <div class="text-desc">
+                                2我是内容我是内容我是内容我是内是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容
+                                我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="common-box common-box-4"></div>
@@ -238,6 +280,14 @@
         $(this).addClass('active');
         $(this).siblings().removeClass('active');
         $('.show-detail-content').html($(this).find('.item-content').html());
+    })
+    //卡展咨询
+    $('.kzzx-tabs-list').on('click', '.kzzx-tab-item', function () {
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active');
+        let m = $(".kzzx-tabs-list .kzzx-tab-item").index(this);
+        $($('.kzzx-content-list .kzzx-content-item')[m]).addClass('active');
+        $($('.kzzx-content-list .kzzx-content-item')[m]).siblings().removeClass('active');
     })
 </script>
 
