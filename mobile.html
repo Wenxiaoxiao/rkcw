@@ -263,6 +263,22 @@
     </div>
 </body>
 <script type="text/javascript">
+    //监听屏幕变化
+    changeSize();
+    $(window).resize(function(){
+        changeSize();
+    });
+    function changeSize(){
+        setTimeout(function(){
+            if($(window).width()>414){
+                let rate = $(window).width()/$('.mobile-container').width();
+                $('.mobile-container').css("-webkit-transform","scale(" + rate + ")");
+            }else{
+                let rate = 1;
+                $('.mobile-container').css("-webkit-transform","scale(" + rate + ")");
+            }
+        },500)
+    }
     var mySwiper = new Swiper('.swiper-container', {
         autoplay: 2000, //可选选项，自动滑动
         speed: 500, //自动滑动开始到结束的时间（单位ms）
