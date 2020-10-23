@@ -27,7 +27,9 @@ img {
 html,
 body {
   width: 100%;
-  height: 100%;
+  height:100vh;
+  overflow: hidden;
+  background: #0b0c3d;
 }
 
 img {
@@ -36,7 +38,9 @@ img {
 
 .mobile-container {
   width: 10rem;
-  min-height: 100vh;
+  height: 100vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   margin: 0 auto;
 }
 
@@ -136,7 +140,7 @@ img {
   height: 9.1467rem;
   background: url('./img/2.png') no-repeat center;
   background-size: 10rem 9.1467rem;
-  margin-top: -0.0133rem;
+  /* margin-top: -0.0133rem; */
 }
 
 .mobile-container .common-box-2 .tabs-title-list {
@@ -247,7 +251,7 @@ img {
   height: 3.12rem;
   background: url('./img/3.png') no-repeat center;
   background-size: 10rem 3.12rem;
-  margin-top: -0.0133rem;
+  /* margin-top: -0.0133rem; */
   padding-top: 1.0667rem;
 }
 
@@ -383,7 +387,7 @@ img {
   height: 10.6933rem;
   background: url('./img/4.png') no-repeat center;
   background-size: 10rem 10.6933rem;
-  margin-top: -0.0267rem;
+  /* margin-top: -0.0267rem; */
 }
 
 .mobile-container .common-box-5 {
@@ -391,7 +395,7 @@ img {
   height: 8.3333rem;
   background: url('./img/5.png') no-repeat center;
   background-size: 10rem 8.3333rem;
-  margin-top: -0.0133rem;
+  /* margin-top: -0.0133rem; */
 }
 
 .mobile-container .common-box-5 .kzzb-title {
@@ -465,7 +469,7 @@ img {
   height: 9.68rem;
   background: url('./img/6.png') no-repeat center;
   background-size: 10rem 9.68rem;
-  margin-top: -0.0267rem;
+  /* margin-top: -0.0267rem; */
   padding-top: 1.7333rem;
 }
 
@@ -549,7 +553,7 @@ img {
   height: 10.1333rem;
   background: url('./img/7.png') no-repeat center;
   background-size: 10rem 10.1333rem;
-  margin-top: -1;
+  /* margin-top: -0.0133rem; */
 }
 
 .mobile-container .common-box-7 .cwjlb-title {
